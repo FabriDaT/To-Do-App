@@ -29,10 +29,10 @@ window.addEventListener('load', function () {
                 'Content-Type': 'application/json'
             }
         };
-        console.log('hola kKk')
+        
         let validaciones = validarDatos(payload);
         renderizarErrores(validaciones);
-        console.log('hola')
+        
         //lanzamos la consulta de login a la API
         realizarRegister(settings);
 
@@ -50,7 +50,7 @@ window.addEventListener('load', function () {
                 console.log(response);
 
                 if (response.ok != true) {
-                    alert("Alguno de los datos es incorrecto.")
+                    console.log("Alguno de los datos es incorrecto.")
                 }
 
                 return response.json();

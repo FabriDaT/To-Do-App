@@ -1,15 +1,16 @@
 
 const form = document.forms[0];
+let errores = [];
 /* ---------------------------------- texto --------------------------------- */
-function validarDatos(usuario) {
-    let errores = [];
+function validarDatos(usuario){
+    
     usuario.firstName.trim();
     usuario.lastName.trim();
     if (usuario.firstName.length < 3) {
         errores.push("El nombre debe tener al menos 3 caracteres.");
       }
-      if (usuario.lastName.length < 2) {
-        errores.push("El apellido debe tener al menos 2 caracteres.");
+      if (usuario.lastName.length < 3) {
+        errores.push("El apellido debe tener al menos 3 caracteres.");
       }
     
 /* ---------------------------------- email --------------------------------- */
@@ -25,7 +26,7 @@ function validarDatos(usuario) {
     }
 
    if(usuario.password !== document.querySelector('#inputPasswordRepetida').value){
-        errores.push('Las contrasenias no coinciden, reviselas nuevamente')
+        errores.push('Las contraseñas no coinciden, reviselas nuevamente')
    }
    return errores;
 }
@@ -45,9 +46,10 @@ function renderizarErrores(errores){
         "background:rgba(255, 0, 0, 0.2);padding:.5em 1em;color: red;margin: .5em 0;";
     errores.forEach((error) => {
         divTemplate.innerHTML += `<p><small>${error}</small></p>`;
+       
     });
-
     form.appendChild(divTemplate); 
+    
     }
 }
 
