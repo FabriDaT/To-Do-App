@@ -64,6 +64,7 @@ window.addEventListener('load', function () {
                 console.log("Promesa rechazada:");
                 console.log(err);
             })
+            referrerPolicy: "unsafe_url" 
     };
 
 
