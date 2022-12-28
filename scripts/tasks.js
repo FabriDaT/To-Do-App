@@ -8,8 +8,8 @@ if (!localStorage.jwt) {
 /* ------ comienzan las funcionalidades una vez que carga el documento ------ */
 window.addEventListener('load', function () {
 
-  const urlTareas = 'https://todo-api.ctd.academy:3000/v1/tasks';
-  const urlUsuario = 'https://todo-api.ctd.academy:3000/v1/users/getMe';
+  const urlTareas = 'http://todo-api.ctd.academy:3000/v1/tasks';
+  const urlUsuario = 'http://todo-api.ctd.academy:3000/v1/users/getMe';
   const token = JSON.parse(localStorage.jwt);
 
   const formCrearTarea = document.querySelector('.nueva-tarea');
