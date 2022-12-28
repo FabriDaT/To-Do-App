@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     const apellido = document.querySelector('#inputApellido');
     const email = document.querySelector('#inputEmail');
     const password = document.querySelector('#inputPassword');
-    const url = 'http://todo-api.ctd.academy:3000/v1/users';
+    const url = 'https://todo-api.ctd.academy:3000/v1/users';
 
     /* -------------------------------------------------------------------------- */
     /*            FUNCIÓN 1: Escuchamos el submit y preparamos el envío           */
