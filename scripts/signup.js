@@ -45,7 +45,7 @@ window.addEventListener('load', function () {
     /* -------------------------------------------------------------------------- */
     function realizarRegister(settings) {
         console.log("Lanzando la consulta a la API");
-        fetch(`${url}/users`, settings)
+        fetch(url, settings)
             .then(response => {
                 console.log(response);
 

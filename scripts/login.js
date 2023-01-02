@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
     const form = document.forms[0];
     const email = document.querySelector('#inputEmail')
     const password = document.querySelector('#inputPassword')
-    const url = 'http://todo-api.ctd.academy:3000/v1/users';
+    const url = 'http://todo-api.ctd.academy:3000/v1/users/login';
 
 
     /* -------------------------------------------------------------------------- */
@@ -38,7 +38,7 @@ window.addEventListener('load', function () {
     /* -------------------------------------------------------------------------- */
     function realizarLogin(settings) {
         console.log("Lanzando la consulta a la API...");
-        fetch(`${url}/login`, settings)
+        fetch(url, settings)
             .then(response => {
                 console.log(response);
 
@@ -64,7 +64,7 @@ window.addEventListener('load', function () {
                 console.log("Promesa rechazada:");
                 console.log(err);
             })
-            referrerPolicy: "unsafe_url" 
+            
     };
 
 
