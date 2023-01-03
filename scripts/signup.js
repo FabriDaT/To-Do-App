@@ -68,7 +68,8 @@ window.addEventListener('load', function () {
                     location.replace('./mis-tareas.html');
                 }
                 
-            }).catch(err => {
+            })
+            .catch(err => {
                 console.log("Promesa rechazada:");
                 console.log(err);
             })
